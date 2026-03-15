@@ -13,15 +13,31 @@ const videos = [
     description:
       "Created a visually engaging marketing video combining motion graphics and typography.",
   },
-
-  // JUST ADD VIDEO PATH BELOW
-  { src: "/videos/v3.mp4" },
-  { src: "/videos/v4.mp4" },
-  { src: "/videos/v5.mp4" },
-  { src: "/videos/v6.mp4" },
-  { src: "/videos/v7.mp4" },
-  { src: "/videos/v8.mp4" },
-  { src: "/videos/v9.mp4" },
+  {
+    src: "/videos/v5.mp4",
+    title: "Creative Motion Graphics",
+    description: "Dynamic motion graphics project showcasing animation techniques.",
+  },
+  {
+    src: "/videos/v6.mp4",
+    title: "Product Showcase",
+    description: "Product-focused promotional video with cinematic editing.",
+  },
+  {
+    src: "/videos/v7.mp4",
+    title: "Social Media Ad",
+    description: "Short-form social media advertisement with engaging visuals.",
+  },
+  {
+    src: "/videos/v8.mp4",
+    title: "Explainer Video",
+    description: "Animated explainer video designed for marketing campaigns.",
+  },
+  {
+    src: "/videos/v9.mp4",
+    title: "Brand Story Video",
+    description: "Story-driven video presenting brand values and identity.",
+  },
 ];
 
 export default function VideosPage() {
@@ -39,7 +55,6 @@ export default function VideosPage() {
 
       {/* VIDEO GRID */}
       <section className="max-w-6xl mx-auto px-6 pb-24">
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
           {videos.map((video, index) => (
@@ -48,6 +63,7 @@ export default function VideosPage() {
               className="rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500 transition"
             >
 
+              {/* VIDEO */}
               <div className="aspect-video bg-black">
                 <video
                   className="w-full h-full object-cover"
@@ -57,26 +73,25 @@ export default function VideosPage() {
                   controlsList="nodownload"
                 >
                   <source src={video.src} type="video/mp4" />
+                  Your browser does not support the video tag.
                 </video>
               </div>
 
-              {video.title && (
-                <div className="p-5">
-                  <h3 className="text-xl font-semibold">
-                    {video.title}
-                  </h3>
+              {/* TITLE + DESCRIPTION */}
+              <div className="p-5">
+                <h3 className="text-xl font-semibold">
+                  {video.title}
+                </h3>
 
-                  <p className="text-gray-400 mt-2">
-                    {video.description}
-                  </p>
-                </div>
-              )}
+                <p className="text-gray-400 mt-2">
+                  {video.description}
+                </p>
+              </div>
 
             </div>
           ))}
 
         </div>
-
       </section>
 
     </main>
