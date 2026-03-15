@@ -2,41 +2,39 @@ import SectionTitle from "@/app/components/SectionTitle";
 
 const videos = [
   {
-    src: "public/videos/v1.mp4",
-    title: "Brand Promotional Video",
-    description:
-      "Designed and edited a high-impact promotional video focused on storytelling and brand identity.",
+    src: "https://res.cloudinary.com/dtmufusgb/video/upload/v1773591463/v1_kevvj3.mp4",
+    title: "Featured Video Project",
+    description: "A professional video project showcasing expertise in visual storytelling, editing, and dynamic media creation.",
   },
   {
-    src: "public/videos/v2.mp4",
-    title: "Marketing Campaign Video",
-    description:
-      "Created a visually engaging marketing video combining motion graphics and typography.",
+    src: "https://res.cloudinary.com/dtmufusgb/video/upload/v1773591484/v2_vl1cgt.mp4",
+    title: "Featured Video Project",
+    description: "A professional video project showcasing expertise in visual storytelling, editing, and dynamic media creation.",
   },
   {
-    src: "public/videos/v5.mp4",
-    title: "Creative Motion Graphics",
-    description: "Dynamic motion graphics project showcasing animation techniques.",
+    src: "https://res.cloudinary.com/dtmufusgb/video/upload/v1773591475/v5_zblh0s.mp4",
+    title: "Featured Video Project",
+    description: "A professional video project showcasing expertise in visual storytelling, editing, and dynamic media creation.",
   },
   {
-    src: "public/videos/v6.mp4",
-    title: "Product Showcase",
-    description: "Product-focused promotional video with cinematic editing.",
+    src: "https://res.cloudinary.com/dtmufusgb/video/upload/v1773591531/v7_u90buy.mp4",
+    title: "Featured Video Project",
+    description: "A professional video project showcasing expertise in visual storytelling, editing, and dynamic media creation.",
   },
   {
-    src: "public/videos/v7.mp4",
-    title: "Social Media Ad",
-    description: "Short-form social media advertisement with engaging visuals.",
+    src: "https://res.cloudinary.com/dtmufusgb/video/upload/v1773591543/v6_awhtxj.mp4",
+    title: "Featured Video Project",
+    description: "A professional video project showcasing expertise in visual storytelling, editing, and dynamic media creation.",
   },
   {
-    src: "public/videos/v8.mp4",
-    title: "Explainer Video",
-    description: "Animated explainer video designed for marketing campaigns.",
+    src: "https://res.cloudinary.com/dtmufusgb/video/upload/v1773591547/v8_jcmm8h.mp4",
+    title: "Featured Video Project",
+    description: "A professional video project showcasing expertise in visual storytelling, editing, and dynamic media creation.",
   },
   {
-    src: "public/videos/v9.mp4",
-    title: "Brand Story Video",
-    description: "Story-driven video presenting brand values and identity.",
+    src: "https://res.cloudinary.com/dtmufusgb/video/upload/v1773591534/v9_d0hyqw.mp4",
+    title: "Featured Video Project",
+    description: "A professional video project showcasing expertise in visual storytelling, editing, and dynamic media creation.",
   },
 ];
 
@@ -72,6 +70,7 @@ export default function VideosPage() {
                   playsInline
                   controlsList="nodownload"
                 >
+                  {/* The source now pulls directly from the cloud! */}
                   <source src={video.src} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
